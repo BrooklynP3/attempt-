@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: #e9f5ff;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #1abc9c;
+}
+
+/* Hero Section */
+.header#about {
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    margin: 20px 0;
+}
+
+.header#about h1 {
+    font-size: 6em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.header#about p {
+    font-size: 2em;
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Content Section */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #1abc9c;
+    display: inline-block;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+/* ol {
+    list-style: decimal inside;
+    margin: 20px 0;
+}
+
+ol li {
+    margin: 15px 0;
+    font-size: 1.2em;
+} */
+ol {
+    list-style: decimal inside;
+    font-size: 2em; /* Make numbered list text larger */
+    text-align: center;
+  }
+  
+  ul {
+    font-size: 1em; /* Keep bullets at normal size */
+    text-align: center;
+  }
+
+ul {
+    list-style: disc inside;
+    margin-left: 20px;
+    color: #555;
+}
+
+/* Image Section */
+.image-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.image-section p {
+    font-style: italic;
+    color: #777;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header#about {
+        padding: 60px 10px;
+    }
+
+    .header#about h1 {
+        font-size: 2em;
+    }
+
+    .header#about p {
+        font-size: 1em;
+    }
+}
+.video-section{
+    text-align: center;
+}
+
+.tableauPlaceholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em auto;
+    max-width: 100%;
+}
+  .header2{
+        background-color: #2c3e50;
+        padding: 15px 20px;
+        text-align: center;
+        color:#fff;
+        font-size: 2em;
+    }
+  

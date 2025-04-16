@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Adventure Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&family=Raleway:wght@400;700&display=swap" rel="stylesheet"> <!-- Adding Adventure Fonts -->
+    <style>
+        /* Background */
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-image: url('https://wallpaperaccess.com/full/3271477.jpg'); /* Calm nature scene background */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-blur: 5px;
+        }
+
+        /* Dark overlay to make text more readable */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Soft dark overlay */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Main container */
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Title style */
+        h1 {
+            font-family: 'Mountains of Christmas', cursive;
+            font-size: 2.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
+        }
+
+        /* Button Style */
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            background-color: #f0a271;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s;
+            font-family: 'Raleway', sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background-color: #8290ff;
+        }
+
+        /* Button spinning effect */
+        .btn.spinning {
+            transform: rotate(360deg);
+        }
+
+        /* Adventure Text Style */
+        .adventure-display {
+            font-size: 1.5rem;
+            font-family: 'Raleway', sans-serif;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border-radius: 10px;
+            width: 80%;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Add fade-in effect */
+        .adventure-display.visible {
+            opacity: 1;
+        }
+        footer {
+            width: 100%;
+            text-align: center;
+            background-color: #696969;
+            text-decoration-color: #8290ff;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        footer p {
+            margin: 5px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="container">
+            <h1>Generate Your Outdoor Adventure</h1>
+            <button class="btn" id="generate-adventure-btn">Generate Adventure</button>
+            <div id="adventure-display" class="adventure-display">Click the button to get an adventure!</div>
+        </div>
+    </div>
+
+    <script>
+        const adventures = [
+            'Go for a hike in a nearby national park.',
+            'Go biking along a scenic trail.',
+            'Have a picnic at the lake.',
+            'Try out rock climbing at a local climbing gym.',
+            'Go kayaking on a calm river.',
+            'Take a walk through a botanical garden.',
+            'Go on a nature scavenger hunt.',
+            'Take a day trip to a mountain and try skiing or snowboarding.',
+            'Go stargazing in a quiet, dark area.',
+            'Take a long walk on a beach and collect seashells.',
+            'Camp in your backyard or at a nearby campsite.',
+            'Visit a nearby waterfall and take photos.',
+            'Explore a local forest and take a nature walk.',
+            'Fly a kite on a windy day at the park.',
+            'Do some birdwatching in your local park or nature reserve.'
+        ];
+
+        const btn = document.getElementById('generate-adventure-btn');
+        const adventureDisplay = document.getElementById('adventure-display');
+
+        // Function to generate a random adventure
+        function generateAdventure() {
+            const randomIndex = Math.floor(Math.random() * adventures.length);
+            const randomAdventure = adventures[randomIndex];
+
+            // Add spinning animation to button
+            btn.classList.add('spinning');
+            setTimeout(() => {
+                btn.classList.remove('spinning'); // Remove spinning effect after it's done
+            }, 500);
+
+            // Display the random adventure with fade-in effect
+            adventureDisplay.classList.remove('visible');
+            setTimeout(() => {
+                adventureDisplay.textContent = randomAdventure;
+                adventureDisplay.classList.add('visible');
+            }, 300); // Delay for the fade-in effect
+        }
+
+        // Event listener for the button click
+        btn.addEventListener('click', generateAdventure);
+    </script>
+
+</body>
+<footer>
+    <a href="index.html">Go Back to Home Page </a>
+    
+</footer>
+<style>
+    footer a {
+        color: white; /* Sets the link color to white */
+        text-decoration: none; /* Removes the underline from the link */
+    }
+
+    footer a:hover {
+        text-decoration: underline; /* Adds underline when the link is hovered */
+    }
+</style>
+</html>

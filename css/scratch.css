@@ -1,0 +1,63 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+/* Custom heading style */
+h1 {
+    color: #007bff;
+    text-align: center;
+    margin-top: 40px;
+    margin: 20px;
+    border: 8px solid black;
+    padding: 20px
+}
+
+h2 {
+    color: #007bff;
+    text-align: center;
+    margin-top: 40px;
+    margin: 20px;
+    border: 8px solid black;
+    padding: 20px
+}
+
+/* Custom card style */
+.custom-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 800px;
+}
+
+/* Anchor styling */
+a.custom-link {
+    color: #17a2b8;
+    text-decoration: none;
+}
+
+a.custom-link:hover {
+    text-decoration: underline;
+}
+
+.date{
+    font-style: italic;
+}
+
+/* Footer style */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color:transparent;
+    color: white;
+}
